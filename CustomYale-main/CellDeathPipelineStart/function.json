@@ -1,0 +1,20 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "rawimages/{name}",
+      "connection": "celldeath_STORAGE"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "msg",
+      "queueName": "container-execution",
+      "connection": "celldeath_STORAGE"
+    }
+  ],
+  "disabled": false
+}
